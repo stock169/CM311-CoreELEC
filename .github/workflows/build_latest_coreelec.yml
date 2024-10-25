@@ -15,7 +15,7 @@ jobs:
       - name: building
         run: sudo sh ./build.sh
         
-      - uses: xresloader/upload-release-asset-node16@v2.0.3
+      - uses: xresloader/upload-to-github-release@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
         with:
