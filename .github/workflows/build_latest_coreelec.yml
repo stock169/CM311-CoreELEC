@@ -15,7 +15,7 @@ jobs:
       - name: building
         run: sudo sh ./build.sh
         
-      - uses: dream-encode/upload-release-asset-node16@v2.0.3
+      - uses: xresloader/upload-release-asset-node16@v2.0.3
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
         with:
