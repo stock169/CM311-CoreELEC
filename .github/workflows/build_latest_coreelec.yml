@@ -7,7 +7,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       
       - name: install required packages
         run: sudo apt update -y && sudo apt install -y make gcc git texinfo gzip squashfs-tools jq
@@ -15,7 +15,7 @@ jobs:
       - name: building
         run: sudo sh ./build.sh
         
-      - uses: xresloader/upload-to-github-release@v1
+      - uses: dream-encode/upload-release-asset-node16@v2.0.3
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
         with:
